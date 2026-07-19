@@ -10,16 +10,21 @@
     }
   },
   "publishing_target": {
-    "primary_platform": "facebook_page",
-    "page_url": "https://www.facebook.com/profile.php?id=61578883028862",
-    "page_id": "61578883028862",
-    "display_name": "Nguyễn Quang Quý",
-    "supporting_profile_url": "https://www.facebook.com/quangquy88/",
-    "supporting_profile_role": "personal_brand_and_manual_reshare_only",
-    "connection_method": "make_facebook_pages_oauth_only",
+    "primary_business_destination": "facebook_personal_profile",
+    "facebook_profile_url": "https://www.facebook.com/quangquy88/",
+    "facebook_profile_username": "quangquy88",
+    "publishing_bridge": "instagram",
+    "instagram_username": "quy28_01",
+    "instagram_url": "https://www.instagram.com/quy28_01/",
+    "current_instagram_account_type": "personal",
+    "required_instagram_account_type_for_api": "creator",
+    "connection_method": "instagram_api_with_instagram_login_via_make_http_oauth",
+    "accounts_center_auto_share_required": true,
+    "facebook_page_in_main_flow": false,
+    "threads_in_main_flow": false,
     "requested_mode": "fully_automatic",
     "auto_publish_enabled": false,
-    "activation_gate": "Enable only after the target appears in Make Facebook Pages and three Run once tests succeed"
+    "activation_gate": "Enable only after an API-published Instagram test post automatically appears on Facebook profile quangquy88 with Public audience"
   },
   "audiences": [
     "chủ spa",
@@ -55,24 +60,16 @@
     "target_mode_after_tests": "auto",
     "stop_after_trial_for_review": true
   },
-  "lead_funnel": {
-    "primary_channel": "facebook_messenger",
-    "entry_points": ["post_comment", "page_message", "cta_button"],
-    "keywords": ["AI", "SPA", "WORKFLOW", "TƯ VẤN"],
-    "capture_fields": ["name", "phone", "business_type", "current_problem", "budget_range"],
-    "storage": "Google Sheets initially; CRM later",
-    "handoff_rule": "Notify Nguyễn Quang Quý when a lead provides phone number or requests consultation",
-    "business_goal": "Turn content engagement into Messenger conversations and qualified consultation leads"
-  },
   "failure_policy": {
-    "publish_failure": "do_not_publish_and_send_telegram_alert",
-    "partial_media_failure": "do_not_create_facebook_post",
+    "instagram_publish_failure": "do_not_publish_and_send_telegram_alert",
+    "facebook_crosspost_missing": "pause_scenario_and_alert",
     "duplicate_topic": "regenerate_before_publish",
-    "messenger_failure": "save_lead_and_alert_for_manual_followup"
+    "do_not_publish_next_post_until_resolved": true,
+    "automatic_delete_from_facebook_profile_guaranteed": false
   },
   "media": {
     "default_type": "single_image",
     "music_required": false,
-    "music_policy": "Facebook-first image posts use no licensed music in full-auto mode. Reels may use original or royalty-free audio with usage rights."
+    "music_policy": "Full-auto test posts use no licensed music. Music from the Instagram library may require manual posting in the app."
   }
 }
