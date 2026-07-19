@@ -1,0 +1,65 @@
+{
+  "brand": {
+    "name": "Nguyễn Quang Quý",
+    "positioning": "Marketing Manager ứng dụng AI và AI Automation cho doanh nghiệp nhỏ",
+    "tone": [
+      "thực tế",
+      "dễ hiểu",
+      "có quan điểm",
+      "không phóng đại"
+    ],
+    "visual": {
+      "primary_colors": ["black", "gold", "white"],
+      "default_ratio": "4:5",
+      "recommended_size": "1080x1350"
+    }
+  },
+  "audiences": [
+    "chủ spa",
+    "cửa hàng online",
+    "doanh nghiệp dịch vụ",
+    "người làm marketing",
+    "người muốn ứng dụng AI vào công việc"
+  ],
+  "content_pillars": [
+    {
+      "name": "AI Automation",
+      "weight": 35
+    },
+    {
+      "name": "Marketing thực chiến",
+      "weight": 25
+    },
+    {
+      "name": "AI cho doanh nghiệp nhỏ",
+      "weight": 20
+    },
+    {
+      "name": "Tutorial và workflow",
+      "weight": 15
+    },
+    {
+      "name": "Case study và bài học",
+      "weight": 5
+    }
+  ],
+  "blocked_angles": [
+    "AI không thay thế con người",
+    "So sánh chung chung ChatGPT Gemini Claude",
+    "Chatbot làm việc 24/7 mà không có ví dụ cụ thể",
+    "Cam kết tăng doanh thu khi chưa có dữ liệu",
+    "Nói AI giúp tiết kiệm thời gian nhưng không mô tả quy trình"
+  ],
+  "cta_keywords": [
+    "AI",
+    "Automation",
+    "Workflow",
+    "Marketing"
+  ],
+  "schedule": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "default_time": "19:00",
+    "days_per_week": 5,
+    "review_mode": true
+  }
+}
