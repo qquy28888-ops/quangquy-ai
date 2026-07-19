@@ -1,6 +1,6 @@
 {
-  "trial_name": "instagram-facebook-threads-7-day-test",
-  "status": "blocked_pending_creator_conversion_and_oauth_test",
+  "trial_name": "facebook-first-content-and-messenger-funnel-7-day-test",
+  "status": "blocked_pending_make_page_oauth_and_three_run_once_tests",
   "start_date": null,
   "end_date": null,
   "duration_days": 7,
@@ -9,7 +9,10 @@
   "initial_test_posts_required": 3,
   "successful_test_posts": 0,
   "auto_publish_enabled": false,
-  "pause_on_partial_sync": true,
+  "instagram_enabled": false,
+  "threads_enabled": false,
+  "messenger_funnel_enabled": false,
+  "pause_on_publish_failure": true,
   "resume_requires_user_approval": true,
   "post_trial_review_required": true
 }
