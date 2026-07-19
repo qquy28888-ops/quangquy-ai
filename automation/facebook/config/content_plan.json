@@ -14,6 +14,15 @@
       "recommended_size": "1080x1350"
     }
   },
+  "publishing_target": {
+    "platform": "facebook",
+    "target_url": "https://www.facebook.com/profile.php?id=61578883028862",
+    "target_id": "61578883028862",
+    "display_name": "Nguyễn Quang Quý",
+    "verification_status": "pending_make_page_connection_check",
+    "api_requirement": "Target must appear in the Facebook Pages connection list in Make before publishing is enabled",
+    "auto_publish_enabled": false
+  },
   "audiences": [
     "chủ spa",
     "cửa hàng online",
