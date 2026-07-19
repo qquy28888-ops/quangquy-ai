@@ -2,12 +2,7 @@
   "brand": {
     "name": "Nguyễn Quang Quý",
     "positioning": "Marketing Manager ứng dụng AI và AI Automation cho doanh nghiệp nhỏ",
-    "tone": [
-      "thực tế",
-      "dễ hiểu",
-      "có quan điểm",
-      "không phóng đại"
-    ],
+    "tone": ["thực tế", "dễ hiểu", "có quan điểm", "không phóng đại"],
     "visual": {
       "primary_colors": ["black", "gold", "white"],
       "default_ratio": "4:5",
@@ -15,42 +10,39 @@
     }
   },
   "publishing_target": {
-    "platform": "facebook",
-    "target_url": "https://www.facebook.com/profile.php?id=61578883028862",
-    "target_id": "61578883028862",
-    "display_name": "Nguyễn Quang Quý",
-    "verification_status": "pending_make_page_connection_check",
-    "api_requirement": "Target must appear in the Facebook Pages connection list in Make before publishing is enabled",
-    "auto_publish_enabled": false
+    "primary_platform": "instagram",
+    "instagram_username": "quy28_01",
+    "instagram_url": "https://www.instagram.com/quy28_01/",
+    "crosspost_targets": [
+      {
+        "platform": "facebook",
+        "username": "quangquy88",
+        "url": "https://www.facebook.com/quangquy88/"
+      },
+      {
+        "platform": "threads",
+        "source": "instagram_accounts_center_sync"
+      }
+    ],
+    "connection_method": "make_oauth_only",
+    "requested_mode": "fully_automatic",
+    "auto_publish_enabled": false,
+    "activation_gate": "Enable only after Make API test posts successfully cross-post to both Facebook and Threads"
   },
   "audiences": [
     "chủ spa",
+    "chủ doanh nghiệp nhỏ",
     "cửa hàng online",
     "doanh nghiệp dịch vụ",
     "người làm marketing",
     "người muốn ứng dụng AI vào công việc"
   ],
   "content_pillars": [
-    {
-      "name": "AI Automation",
-      "weight": 35
-    },
-    {
-      "name": "Marketing thực chiến",
-      "weight": 25
-    },
-    {
-      "name": "AI cho doanh nghiệp nhỏ",
-      "weight": 20
-    },
-    {
-      "name": "Tutorial và workflow",
-      "weight": 15
-    },
-    {
-      "name": "Case study và bài học",
-      "weight": 5
-    }
+    {"name": "AI Automation cho doanh nghiệp nhỏ", "weight": 30},
+    {"name": "AI cho spa và chăm sóc khách hàng", "weight": 25},
+    {"name": "Marketing thực chiến", "weight": 20},
+    {"name": "Tutorial và workflow", "weight": 15},
+    {"name": "Case study và bài học", "weight": 10}
   ],
   "blocked_angles": [
     "AI không thay thế con người",
@@ -59,16 +51,18 @@
     "Cam kết tăng doanh thu khi chưa có dữ liệu",
     "Nói AI giúp tiết kiệm thời gian nhưng không mô tả quy trình"
   ],
-  "cta_keywords": [
-    "AI",
-    "Automation",
-    "Workflow",
-    "Marketing"
-  ],
+  "cta_keywords": ["AI", "Automation", "Workflow", "Marketing", "SPA"],
   "schedule": {
     "timezone": "Asia/Ho_Chi_Minh",
-    "default_time": "19:00",
-    "days_per_week": 5,
-    "review_mode": true
+    "daily_times": ["08:00", "13:00", "18:00"],
+    "days_per_week": 7,
+    "review_mode_for_initial_tests": true,
+    "review_test_post_count": 3,
+    "target_mode_after_tests": "auto"
+  },
+  "media": {
+    "default_type": "single_image",
+    "music_required": false,
+    "music_note": "Music added from the Instagram app is not assumed to be available through Make/API. Test separately before making it mandatory."
   }
 }
