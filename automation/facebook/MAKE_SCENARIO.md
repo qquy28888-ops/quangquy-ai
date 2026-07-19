@@ -1,5 +1,19 @@
 # Thiết lập Make Scenario — Tạo bài, tạo ảnh và đăng Fanpage
 
+## Tài khoản Facebook đích
+
+```text
+URL: https://www.facebook.com/profile.php?id=61578883028862
+ID: 61578883028862
+Trạng thái: chưa bật tự động đăng
+```
+
+Trước khi bật scenario, mở module `Facebook Pages` trong Make và kiểm tra tài khoản này có xuất hiện trong danh sách **Page** hay không.
+
+- Nếu xuất hiện bằng đúng tên và ID, chọn từ danh sách; không nhập ID thủ công.
+- Nếu không xuất hiện, đây không phải đối tượng Page mà kết nối Facebook Pages được quyền đăng. Khi đó dừng luồng và không dùng cookie, Selenium hoặc token không chính thức.
+- Chỉ đổi `auto_publish_enabled` thành `true` sau khi `Run once` đăng thành công một bài thử và người dùng xác nhận đúng nơi nhận.
+
 ## Luồng khuyến nghị
 
 ```text
