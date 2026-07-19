@@ -1,0 +1,44 @@
+{
+  "enabled": false,
+  "trial_days": 7,
+  "reels_per_day": 1,
+  "default_publish_time": "13:00",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "source_account": "instagram:quy28_01",
+  "business_destination": "facebook_profile:quangquy88",
+  "required_instagram_type": "creator",
+  "facebook_professional_mode_required": true,
+  "formats": [
+    "talking_head",
+    "screen_recording_tutorial",
+    "manual_vs_automation",
+    "spa_case",
+    "three_mistakes",
+    "original_ai_assisted_visual"
+  ],
+  "duration_seconds": {
+    "minimum": 20,
+    "target": 35,
+    "maximum": 45
+  },
+  "video": {
+    "ratio": "9:16",
+    "size": "1080x1920",
+    "captions_required": true,
+    "third_party_watermark_allowed": false
+  },
+  "audio": {
+    "full_auto": ["original_voice", "original_audio", "licensed_royalty_free"],
+    "licensed_meta_library": "manual_only",
+    "preferred_artist_manual_only": "Đen Vâu"
+  },
+  "goals": [
+    "views",
+    "followers",
+    "messenger_conversations",
+    "qualified_leads",
+    "monetization_readiness"
+  ],
+  "activation_gate": "Three API-published test Reels must cross-post to Facebook profile as Public before enabling the schedule",
+  "monetization_guaranteed": false
+}
