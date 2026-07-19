@@ -1,0 +1,53 @@
+{
+  "voice": {
+    "owner": "Nguyen Quang Quy",
+    "source": "user_provided_voice_sample",
+    "mode": "original_or_consented_voice_profile",
+    "sample_storage": "Google Drive private folder",
+    "public_repository_storage_allowed": false,
+    "minimum_test_minutes": 3,
+    "recommended_minutes": 10,
+    "language": "vi-VN",
+    "delivery": ["tu_nhien", "ro_rang", "thuc_te", "co_nhip_dieu"]
+  },
+  "sfx_sources": [
+    {
+      "name": "Mixkit Sound Effects",
+      "priority": 1,
+      "license_check_required": true
+    },
+    {
+      "name": "Pixabay Sound Effects",
+      "priority": 2,
+      "license_check_required": true
+    },
+    {
+      "name": "Meta Sound Collection",
+      "priority": 3,
+      "platform_scope": "Meta ecosystem"
+    }
+  ],
+  "sfx_palette": [
+    "whoosh",
+    "pop",
+    "click",
+    "typing",
+    "notification",
+    "error_buzzer",
+    "success_ding",
+    "riser",
+    "impact"
+  ],
+  "mixing": {
+    "voice_priority": true,
+    "music_ducking": true,
+    "max_primary_sfx_per_scene": 2,
+    "mobile_speaker_test_required": true
+  },
+  "auto_publish_gate": {
+    "voice_consent_confirmed": false,
+    "voice_sample_uploaded": false,
+    "audio_license_verified": false,
+    "three_manual_reviews_completed": false
+  }
+}
