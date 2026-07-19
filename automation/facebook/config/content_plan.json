@@ -10,26 +10,16 @@
     }
   },
   "publishing_target": {
-    "primary_platform": "instagram",
-    "instagram_username": "quy28_01",
-    "instagram_url": "https://www.instagram.com/quy28_01/",
-    "current_account_type": "personal",
-    "required_account_type_before_api": "creator",
-    "crosspost_targets": [
-      {
-        "platform": "facebook",
-        "username": "quangquy88",
-        "url": "https://www.facebook.com/quangquy88/"
-      },
-      {
-        "platform": "threads",
-        "source": "instagram_accounts_center_sync"
-      }
-    ],
-    "connection_method": "make_oauth_only",
+    "primary_platform": "facebook_page",
+    "page_url": "https://www.facebook.com/profile.php?id=61578883028862",
+    "page_id": "61578883028862",
+    "display_name": "Nguyễn Quang Quý",
+    "supporting_profile_url": "https://www.facebook.com/quangquy88/",
+    "supporting_profile_role": "personal_brand_and_manual_reshare_only",
+    "connection_method": "make_facebook_pages_oauth_only",
     "requested_mode": "fully_automatic",
     "auto_publish_enabled": false,
-    "activation_gate": "Enable only after API test posts successfully appear on Instagram, Facebook and Threads"
+    "activation_gate": "Enable only after the target appears in Make Facebook Pages and three Run once tests succeed"
   },
   "audiences": [
     "chủ spa",
@@ -41,10 +31,10 @@
   ],
   "content_pillars": [
     {"name": "AI Automation cho doanh nghiệp nhỏ", "weight": 30},
-    {"name": "AI cho spa và chăm sóc khách hàng", "weight": 25},
+    {"name": "AI cho spa và chăm sóc khách hàng", "weight": 30},
     {"name": "Marketing thực chiến", "weight": 20},
     {"name": "Tutorial và workflow", "weight": 15},
-    {"name": "Case study và bài học", "weight": 10}
+    {"name": "Case study và bài học", "weight": 5}
   ],
   "blocked_angles": [
     "AI không thay thế con người",
@@ -53,7 +43,7 @@
     "Cam kết tăng doanh thu khi chưa có dữ liệu",
     "Nói AI giúp tiết kiệm thời gian nhưng không mô tả quy trình"
   ],
-  "cta_keywords": ["AI", "Automation", "Workflow", "Marketing", "SPA"],
+  "cta_keywords": ["AI", "Automation", "Workflow", "SPA", "Tư vấn"],
   "schedule": {
     "timezone": "Asia/Ho_Chi_Minh",
     "daily_times": ["08:00", "13:00", "18:00"],
@@ -65,19 +55,24 @@
     "target_mode_after_tests": "auto",
     "stop_after_trial_for_review": true
   },
-  "consistency_policy": {
-    "desired": "keep_all_or_remove_all",
-    "official_api_atomicity_available": false,
-    "failure_action": "pause_scenario_and_alert",
-    "automatic_delete_guaranteed": false,
-    "manual_cleanup_required_if_crosspost_is_partial": true,
-    "do_not_publish_next_post_until_resolved": true
+  "lead_funnel": {
+    "primary_channel": "facebook_messenger",
+    "entry_points": ["post_comment", "page_message", "cta_button"],
+    "keywords": ["AI", "SPA", "WORKFLOW", "TƯ VẤN"],
+    "capture_fields": ["name", "phone", "business_type", "current_problem", "budget_range"],
+    "storage": "Google Sheets initially; CRM later",
+    "handoff_rule": "Notify Nguyễn Quang Quý when a lead provides phone number or requests consultation",
+    "business_goal": "Turn content engagement into Messenger conversations and qualified consultation leads"
+  },
+  "failure_policy": {
+    "publish_failure": "do_not_publish_and_send_telegram_alert",
+    "partial_media_failure": "do_not_create_facebook_post",
+    "duplicate_topic": "regenerate_before_publish",
+    "messenger_failure": "save_lead_and_alert_for_manual_followup"
   },
   "media": {
     "default_type": "single_image",
     "music_required": false,
-    "preferred_artist": "Đen Vâu",
-    "licensed_music_auto_attach_allowed": false,
-    "music_note": "Do not upload or embed Đen Vâu tracks as original audio. Licensed music may only be selected manually inside Meta apps when available. Full-auto uses no music or royalty-free/original audio with usage rights."
+    "music_policy": "Facebook-first image posts use no licensed music in full-auto mode. Reels may use original or royalty-free audio with usage rights."
   }
 }
