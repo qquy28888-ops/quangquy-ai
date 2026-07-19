@@ -1,0 +1,36 @@
+{
+  "source": {
+    "platform": "instagram",
+    "username": "quy28_01",
+    "url": "https://www.instagram.com/quy28_01/",
+    "account_type": "pending_verification",
+    "make_connection_verified": false
+  },
+  "destinations": {
+    "facebook": {
+      "profile_name": "Nguyễn Quang Quý",
+      "url": "https://www.facebook.com/quangquy88/",
+      "manual_crosspost_verified": true,
+      "api_crosspost_verified": false
+    },
+    "threads": {
+      "linked_to_instagram": true,
+      "manual_crosspost_verified": true,
+      "api_crosspost_verified": false
+    }
+  },
+  "evidence": {
+    "facebook_post_url": "https://www.facebook.com/quangquy88/posts/pfbid02R2fn889CA3j7mBiFVyXT6tazq9N91hBybLFMov3nwgyTNXhqC58ZpugW9HxyVXwPl",
+    "verified_by_user": true
+  },
+  "automation": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "default_time": "19:00",
+    "review_mode": true,
+    "auto_publish_enabled": false,
+    "required_api_tests": [
+      "photo_without_music",
+      "reel_with_owned_or_royalty_free_audio"
+    ]
+  }
+}
