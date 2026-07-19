@@ -13,6 +13,8 @@
     "primary_platform": "instagram",
     "instagram_username": "quy28_01",
     "instagram_url": "https://www.instagram.com/quy28_01/",
+    "current_account_type": "personal",
+    "required_account_type_before_api": "creator",
     "crosspost_targets": [
       {
         "platform": "facebook",
@@ -27,7 +29,7 @@
     "connection_method": "make_oauth_only",
     "requested_mode": "fully_automatic",
     "auto_publish_enabled": false,
-    "activation_gate": "Enable only after Make API test posts successfully cross-post to both Facebook and Threads"
+    "activation_gate": "Enable only after API test posts successfully appear on Instagram, Facebook and Threads"
   },
   "audiences": [
     "chủ spa",
@@ -56,13 +58,26 @@
     "timezone": "Asia/Ho_Chi_Minh",
     "daily_times": ["08:00", "13:00", "18:00"],
     "days_per_week": 7,
+    "trial_duration_days": 7,
+    "planned_posts": 21,
     "review_mode_for_initial_tests": true,
     "review_test_post_count": 3,
-    "target_mode_after_tests": "auto"
+    "target_mode_after_tests": "auto",
+    "stop_after_trial_for_review": true
+  },
+  "consistency_policy": {
+    "desired": "keep_all_or_remove_all",
+    "official_api_atomicity_available": false,
+    "failure_action": "pause_scenario_and_alert",
+    "automatic_delete_guaranteed": false,
+    "manual_cleanup_required_if_crosspost_is_partial": true,
+    "do_not_publish_next_post_until_resolved": true
   },
   "media": {
     "default_type": "single_image",
     "music_required": false,
-    "music_note": "Music added from the Instagram app is not assumed to be available through Make/API. Test separately before making it mandatory."
+    "preferred_artist": "Đen Vâu",
+    "licensed_music_auto_attach_allowed": false,
+    "music_note": "Do not upload or embed Đen Vâu tracks as original audio. Licensed music may only be selected manually inside Meta apps when available. Full-auto uses no music or royalty-free/original audio with usage rights."
   }
 }
