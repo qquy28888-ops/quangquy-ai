@@ -23,12 +23,22 @@ Dùng giọng thật của Nguyễn Quang Quý làm voice-over chính cho video 
 
 ## Nguồn hiệu ứng âm thanh ưu tiên
 
-1. Mixkit Sound Effects.
-2. Pixabay Sound Effects.
-3. Meta Sound Collection cho nội dung trong hệ sinh thái Meta.
-4. Freesound chỉ dùng file có giấy phép phù hợp; tránh giấy phép NonCommercial nếu mục tiêu là kiếm tiền hoặc bán dịch vụ.
+1. TiếngĐộng.com cho SFX mang ngữ cảnh Việt Nam: câu nói viral, meme, bất ngờ, thất bại, game, chuyển cảnh, tiếng cười.
+2. Mixkit Sound Effects.
+3. Pixabay Sound Effects.
+4. Meta Sound Collection cho nội dung trong hệ sinh thái Meta.
+5. Freesound chỉ dùng file có giấy phép phù hợp; tránh giấy phép NonCommercial nếu mục tiêu là kiếm tiền hoặc bán dịch vụ.
 
 Không tải âm thanh bằng cách rip từ video YouTube hoặc nguồn không rõ giấy phép.
+
+### Quy tắc riêng với TiếngĐộng.com
+
+- Không mặc định mọi file đều an toàn cho thương mại hoặc kiếm tiền.
+- Trước khi dùng phải lưu: tên âm thanh, URL nguồn, ngày kiểm tra, ghi chú nguồn gốc và credit nếu cần.
+- Ưu tiên SFX ngắn, không chứa đoạn nhạc hoặc lời thoại có bản quyền rõ ràng.
+- Với câu nói viral, meme có giọng người nổi tiếng, phim, gameshow hoặc chương trình truyền hình: không tự động đăng nếu chưa xác minh quyền sử dụng.
+- Nếu nguồn không rõ hoặc có nguy cơ khiếu nại, thay bằng SFX tương đương từ Mixkit, Pixabay hoặc Meta Sound Collection.
+- Có thể ghi nguồn theo gợi ý của website khi phù hợp.
 
 ## Bộ hiệu ứng cuốn hút
 
@@ -42,6 +52,7 @@ Không tải âm thanh bằng cách rip từ video YouTube hoặc nguồn không
 - `cash/register`: chỉ dùng nhẹ khi nói về tiết kiệm chi phí; không ám chỉ doanh thu bảo đảm.
 - `riser`: tăng nhịp trước phần giải pháp.
 - `impact`: nhấn mạnh hook hoặc kết luận.
+- `vietnamese_meme_sfx`: chỉ dùng khi đã xác minh nguồn và quyền sử dụng.
 
 ## Quy tắc mix âm thanh
 
@@ -61,6 +72,7 @@ AI tạo kịch bản
 → tách voice-over thành từng câu
 → tạo giọng Nguyễn Quang Quý từ voice profile hoặc dùng file thu thật
 → chọn hiệu ứng theo hành động từng cảnh
+→ kiểm tra nguồn và quyền sử dụng SFX
 → ghép voice + SFX + nhạc nền an toàn
 → chuẩn hóa âm lượng
 → tạo phụ đề
@@ -76,6 +88,7 @@ Không đăng tự động nếu:
 - chưa có sự đồng ý sử dụng voice profile;
 - file giọng lỗi hoặc phát âm sai tên thương hiệu;
 - hiệu ứng quá lớn che giọng;
-- không xác minh được giấy phép âm thanh;
+- không xác minh được giấy phép hoặc nguồn SFX;
+- SFX chứa lời thoại/nghệ sĩ/nội dung có nguy cơ bản quyền;
 - video không có phụ đề;
 - video không xuất đúng 9:16.
