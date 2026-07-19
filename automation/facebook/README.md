@@ -1,56 +1,59 @@
-# QuangQuy AI — Facebook Content Automation
+# Facebook Automation — QuangQuy AI
 
-Hệ thống tạo nội dung, tạo ảnh và đăng tự động lên **Facebook Fanpage** bằng Make.
+## Chiến lược hiện tại: Facebook-first
 
-## Kiến trúc
+Mục tiêu ưu tiên là xây phễu khách hàng trên Facebook, không phụ thuộc Instagram hoặc Threads.
+
+- Fanpage mục tiêu: `61578883028862`
+- Hồ sơ cá nhân hỗ trợ uy tín: `quangquy88`
+- Kênh đăng nội dung: Facebook Page qua Make OAuth
+- Kênh thu lead: Facebook Messenger
+- Kho dữ liệu ban đầu: Google Sheets
+- Cảnh báo lead nóng và lỗi: Telegram
+
+## Hai luồng chính
+
+### 1. Content Engine
+
+Đăng tự động vào 08:00, 13:00 và 18:00 trong 7 ngày thử nghiệm.
 
 ```text
 Scheduler
-  → Google Sheets lấy chủ đề và lịch sử gần nhất
-  → OpenAI tạo caption + prompt ảnh dạng JSON
-  → JSON Parse
-  → OpenAI tạo ảnh
-  → Facebook Pages: Create a Post with Photos
-  → Google Sheets lưu kết quả
-  → Telegram gửi thông báo
+→ Google Sheets lấy lịch sử nội dung
+→ OpenAI tạo caption + prompt ảnh
+→ tạo ảnh 4:5
+→ Facebook Pages đăng bài ảnh
+→ lưu kết quả
+→ Telegram báo trạng thái
 ```
 
-## Nguyên tắc
-
-1. Chỉ đăng bằng module **Facebook Pages**, không dùng cookie hoặc giả lập trình duyệt.
-2. Không lưu API key, token Facebook hoặc thông tin đăng nhập trong GitHub.
-3. Chạy thử bằng `Run once` trước khi bật lịch.
-4. Bật chế độ duyệt thủ công trong giai đoạn đầu.
-5. Lưu ít nhất 20 chủ đề gần nhất để tránh lặp nội dung.
-6. Không đăng trực tiếp lên Facebook Profile cá nhân bằng luồng này.
-
-## Hai chế độ
-
-### Review mode — khuyến nghị khi mới chạy
+### 2. Messenger Lead Funnel
 
 ```text
-AI tạo bài + ảnh
-→ gửi Telegram
-→ người dùng duyệt
-→ Make đăng Fanpage
+Khách nhắn Page hoặc bình luận CTA
+→ tự động chào và xác định nhu cầu
+→ AI hỏi từng bước
+→ lưu lead vào Google Sheets
+→ khi có số điện thoại/yêu cầu tư vấn: báo Nguyễn Quang Quý
 ```
 
-### Auto mode
+## Tài liệu
 
-```text
-AI tạo bài + ảnh
-→ kiểm tra điều kiện
-→ đăng Fanpage
-→ báo kết quả
-```
+- `FACEBOOK_FIRST_FUNNEL.md`: kiến trúc phễu đầy đủ.
+- `MAKE_SCENARIO.md`: cấu hình scenario đăng bài.
+- `prompts/content_and_image_prompt.md`: prompt tạo nội dung và ảnh.
+- `prompts/messenger_lead_qualifier.md`: prompt tư vấn và phân loại lead.
+- `facebook_leads_template.csv`: mẫu bảng lead.
+- `config/content_plan.json`: cấu hình thương hiệu, lịch và phễu.
+- `config/trial_state.json`: trạng thái thử nghiệm.
+- `SECURITY.md`: quy tắc bảo mật.
 
-Chỉ bật Auto mode sau khi đã chạy ổn định ít nhất 10 bài thử.
+## Điều kiện bật tự động
 
-## File liên quan
+1. Fanpage xuất hiện trong module Facebook Pages của Make.
+2. Ba lần `Run once` đăng đúng Page.
+3. Messenger instant reply hoạt động.
+4. Một cuộc trò chuyện thử được lưu vào Google Sheets.
+5. Telegram nhận được cảnh báo lead nóng.
 
-- `MAKE_SCENARIO.md`: hướng dẫn dựng scenario.
-- `prompts/content_and_image_prompt.md`: prompt chuẩn để sinh caption và prompt ảnh.
-- `config/content_plan.json`: định vị nội dung và lịch mẫu.
-- `examples/webhook_payload.json`: payload mẫu khi gọi từ ChatGPT hoặc webhook.
-- `content_queue_template.csv`: mẫu dữ liệu quản lý chủ đề.
-- `SECURITY.md`: quy tắc bảo mật và kiểm soát lỗi.
+Không dùng mật khẩu, cookie, OTP hoặc session token. Chỉ dùng OAuth và API chính thức.
