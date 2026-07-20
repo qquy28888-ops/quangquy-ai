@@ -1,0 +1,30 @@
+{
+  "primary_channels": ["instagram", "facebook_personal_profile"],
+  "threads": {
+    "enabled_by_default": false,
+    "manual_only": true,
+    "safe_caption_chars": 450
+  },
+  "caption_limits": {
+    "reel_chars": 700,
+    "image_post_chars": 900,
+    "hashtags_min": 3,
+    "hashtags_max": 5,
+    "single_cta_only": true
+  },
+  "validation": {
+    "count_unicode_after_render": true,
+    "regenerate_when_over_limit": true,
+    "never_cut_mid_sentence": true,
+    "reject_empty_caption": true,
+    "reject_hashtag_only_caption": true,
+    "verify_instagram_caption_after_publish": true,
+    "verify_facebook_caption_after_crosspost": true,
+    "pause_on_missing_caption": true
+  },
+  "storage": {
+    "save_long_version": true,
+    "save_publish_version": true,
+    "destination": "google_sheets"
+  }
+}
