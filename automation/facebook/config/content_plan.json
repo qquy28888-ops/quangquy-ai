@@ -16,14 +16,15 @@
     "publishing_bridge": "instagram",
     "instagram_username": "quy28_01",
     "instagram_url": "https://www.instagram.com/quy28_01/",
-    "current_instagram_account_type": "personal",
-    "required_instagram_account_type_for_api": "creator",
+    "current_instagram_account_type": "creator",
+    "creator_conversion_confirmed_by_user": true,
     "connection_method": "instagram_api_with_instagram_login_via_make_http_oauth",
     "accounts_center_auto_share_required": true,
     "facebook_page_in_main_flow": false,
     "threads_in_main_flow": false,
     "requested_mode": "fully_automatic",
     "auto_publish_enabled": false,
+    "next_gate": "Verify Accounts Center shares posts and reels to facebook profile quangquy88 with Public audience",
     "activation_gate": "Enable only after an API-published Instagram test post automatically appears on Facebook profile quangquy88 with Public audience"
   },
   "audiences": [
