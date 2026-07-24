@@ -1,0 +1,32 @@
+{
+  "project_name": "QuangQuy AI",
+  "repository": "qquy28888-ops/quangquy-ai",
+  "default_branch": "main",
+  "work_branch_prefix": "ai/",
+  "google_drive_folder_id": "1OGACCo_7WsLFGE1D7zGddoeWhP_LgWSb",
+  "drive_subfolders": {
+    "documents": "1oIyUhHaqE6K-SK1dPngxkGxEPw7bHkzL",
+    "colab": "1KeM64bE_x-OR5Bn7EjRU0rT___lkHFZP",
+    "assets": "1YaQ-u9oSBmVMhcB00PDX7pL_oI32PGHz",
+    "exports": "11LPzrpeloufhFhDFMj65W28lMiUXh8Xs",
+    "backups": "1ZSjsaRA0k3aU62XGL5NqMHdeOKI5mKDZ",
+    "inbox": "1HAkmJ5JYnwYIKejKxOda1d-nXFuczoJT"
+  },
+  "agent": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "auto_apply_risk": "low",
+    "max_context_chars": 90000
+  },
+  "safe_commands": [
+    "python -m pytest",
+    "pytest",
+    "npm test",
+    "npm run lint",
+    "npm run build",
+    "npm run check",
+    "pnpm test",
+    "pnpm lint",
+    "pnpm build"
+  ]
+}

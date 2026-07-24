@@ -1,0 +1,20 @@
+{
+  "action": "create_facebook_post",
+  "mode": "review",
+  "brand": "Nguyễn Quang Quý",
+  "topic": "Cách doanh nghiệp nhỏ dùng AI để phân loại khách hàng tiềm năng",
+  "audience": "chủ doanh nghiệp nhỏ",
+  "format": "image_post",
+  "publish_at": "2026-07-20T19:00:00+07:00",
+  "requirements": {
+    "caption_words_min": 220,
+    "caption_words_max": 350,
+    "image_ratio": "4:5",
+    "cta_keyword": "AI",
+    "avoid_recent_topics": true
+  },
+  "approval": {
+    "required": true,
+    "channel": "telegram"
+  }
+}
